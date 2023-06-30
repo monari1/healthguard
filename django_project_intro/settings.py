@@ -11,7 +11,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Django REST Framework
     'rest_framework',
-    
+    'corsheaders',
+
     # Your apps
     'first_app',
     'django.contrib.admin',
@@ -26,6 +27,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -51,6 +53,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_project_intro.wsgi.application'
+AUTH_USER_MODEL = 'first_app.UserProfile'
+
 
 DATABASES = {
     'default': {
@@ -71,7 +75,7 @@ REST_FRAMEWORK = {
 
 # Allow CORS headers
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
+    'http://localhost:5173',
 ]
 
 LANGUAGE_CODE = 'en-us'

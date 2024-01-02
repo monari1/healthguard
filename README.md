@@ -1,0 +1,1 @@
+health guard was a project carried out in a competition of implementing inusrance API offered by Savanna Informatic to check the credibility of the people insured to reduce cases of fraud. The Project came 3rd Position. 
